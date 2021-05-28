@@ -4,9 +4,9 @@
   "scripts": {
     "clean": "npx rescript clean",
     "start": "webpack",
-    "build": "npx rescript build && webpack",
-    "re:watch": "npx rescript build -w",
-    "open": "explorer.exe index.html"
+    "build": "npx rescript build -with-deps && webpack",
+    "re:watch": "npx rescript build -with-deps -w",
+    "open": "powershell.exe /c start $(wslpath -w dist//index.html)"
   },
   "keywords": [
     "rescript"
@@ -20,5 +20,8 @@
     "rescript": "*",
     "webpack": "*",
     "webpack-cli": "*"
+  },
+  "devDependencies": {
+    "webpack-utf8-bom": "^1.3.0"
   }
 }

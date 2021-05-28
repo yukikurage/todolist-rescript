@@ -1,4 +1,5 @@
 const path = require('path')
+const BomPlugin = require('webpack-utf8-bom');
 
 module.exports = {
     entry:{
@@ -7,5 +8,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
-    }
+    },
+    plugins: [
+        new BomPlugin(true)
+    ]
 }
