@@ -2,9 +2,11 @@
   "name": "todolist-rescript",
   "version": "0.0.1",
   "scripts": {
-    "build": "rescript",
-    "clean": "rescript clean -with-deps",
-    "start": "rescript build -w"
+    "clean": "npx rescript clean",
+    "start": "webpack",
+    "build": "npx rescript build && webpack",
+    "re:watch": "npx rescript build -w",
+    "open": "explorer.exe index.html"
   },
   "keywords": [
     "rescript"
@@ -12,6 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@rescript/react": "^0.10.3",
     "rescript": "*"
   }
 }
