@@ -6,7 +6,7 @@
     "start": "webpack",
     "build": "npx rescript build -with-deps && webpack",
     "re:watch": "npx rescript build -with-deps -w",
-    "open": "powershell.exe /c start $(wslpath -w dist//index.html)"
+    "open": "powershell.exe /c start $(wslpath -w index.html)"
   },
   "keywords": [
     "rescript"
